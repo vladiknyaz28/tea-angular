@@ -1,0 +1,113 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Оформление заказа</h2>
+
+  <div *ngIf="!orderSuccess; else successBlock">
+    <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <label class="form-label">Имя</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="firstName"
+            [ngClass]="{'is-invalid': f['firstName'].invalid && f['firstName'].touched}"
+          >
+          <div class="invalid-feedback" *ngIf="f['firstName'].invalid && f['firstName'].touched">
+            Можно вводить только буквы.
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Фамилия</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="lastName"
+            [ngClass]="{'is-invalid': f['lastName'].invalid && f['lastName'].touched}"
+          >
+          <div class="invalid-feedback" *ngIf="f['lastName'].invalid && f['lastName'].touched">
+            Можно вводить только буквы.
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Телефон</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="phone"
+            [ngClass]="{'is-invalid': f['phone'].invalid && f['phone'].touched}"
+          >
+          <div class="invalid-feedback" *ngIf="f['phone'].invalid && f['phone'].touched">
+            Только цифры и знак +, всего 11 цифр.
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Страна</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="country"
+            [ngClass]="{'is-invalid': f['country'].invalid && f['country'].touched}"
+          >
+          <div class="invalid-feedback" *ngIf="f['country'].invalid && f['country'].touched">
+            Обязательное поле.
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Индекс</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="zip"
+            [ngClass]="{'is-invalid': f['zip'].invalid && f['zip'].touched}"
+          >
+          <div class="invalid-feedback" *ngIf="f['zip'].invalid && f['zip'].touched">
+            Можно вводить только цифры.
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label class="form-label">Адрес</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="address"
+            [ngClass]="{'is-invalid': f['address'].invalid && f['address'].touched}"
+          >
+          <div class="invalid-feedback" *ngIf="f['address'].invalid && f['address'].touched">
+            Можно вводить только буквы, цифры, пробел, дефис и слеш.
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Товар</label>
+          <input type="text" class="form-control" formControlName="product">
+        </div>
+
+        <div class="col-12">
+          <label class="form-label">Комментарий к заказу</label>
+          <textarea class="form-control" rows="3" formControlName="comment"></textarea>
+        </div>
+
+        <div class="col-12 mt-3 d-flex align-items-center gap-3 flex-wrap">
+          <button type="submit" class="btn btn-primary" [disabled]="isSubmitting">
+            {{ isSubmitting ? 'Отправка...' : 'Отправить' }}
+          </button>
+
+          <span class="text-danger" *ngIf="orderError">
+            Произошла ошибка. Попробуйте еще раз.
+          </span>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <ng-template #successBlock>
+    <div class="text-center mt-5">
+      <h3>Спасибо за заказ!</h3>
+    </div>
+  </ng-template>
+</div>

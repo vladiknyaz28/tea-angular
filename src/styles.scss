@@ -1,1 +1,200 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.hero-section {
+  margin-top: 72px;
+  margin-bottom: 72px;
+}
+
+.hero-slider {
+  position: relative;
+}
+
+.hero-slider img {
+  width: 100%;
+  height: auto;
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #076bff !important;
+  border-radius: 50%;
+  background: #ffffff !important;
+  color: #076bff !important;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.slick-prev {
+  left: 15px;
+}
+
+.slick-next {
+  right: 15px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 37px;
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.collections-section {
+  margin-bottom: 55px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 37px;
+  text-align: center;
+  color: #000000;
+}
+
+.card-title {
+  font-size: 20px;
+  line-height: 23px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.btn-primary {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.faq-section {
+  margin-top: 72px;
+}
+
+.faq-container {
+  max-width: 856px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.faq-section h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 37px;
+  color: #000000;
+}
+
+.accordion-item {
+  border: none !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: transparent;
+}
+
+.accordion-header {
+  margin-bottom: 0;
+}
+
+.accordion-button {
+  background: linear-gradient(360deg, #076bff 0%, #007bff 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  min-height: 68px;
+  padding: 22px 23px;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(360deg, #076bff 0%, #007bff 100%) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  background-size: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.accordion-body {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 25px 23px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.popup-box {
+  position: relative;
+  max-width: 420px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.popup-text {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: #888888;
+}
+
+.popup-close:hover {
+  color: #000000;
+}
