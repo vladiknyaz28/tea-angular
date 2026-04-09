@@ -1,0 +1,57 @@
+::ng-deep .hero-section .carousel {
+  position: relative;
+}
+
+::ng-deep .hero-section .carousel-control-prev,
+::ng-deep .hero-section .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+}
+
+::ng-deep .hero-section .carousel-control-prev {
+  left: 15px;
+}
+
+::ng-deep .hero-section .carousel-control-next {
+  right: 15px;
+}
+
+::ng-deep .hero-section .carousel-control-prev-icon,
+::ng-deep .hero-section .carousel-control-next-icon {
+  display: none;
+}
+
+::ng-deep .hero-section .carousel-control-prev::before,
+::ng-deep .hero-section .carousel-control-next::before {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #076bff;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #076bff;
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: '';
+  box-sizing: border-box;
+}
+
+::ng-deep .hero-section .carousel-control-prev::before {
+  content: '❮';
+}
+
+::ng-deep .hero-section .carousel-control-next::before {
+  content: '❯';
+}
+
+::ng-deep .hero-section .carousel-control-prev:hover::before,
+::ng-deep .hero-section .carousel-control-next:hover::before {
+  background: #f5f9ff;
+}
